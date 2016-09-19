@@ -14,11 +14,10 @@ function activate_skills_bars() {
 
         if ((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
-            $element.addClass('triggered');
-            $element.attr('viewed','true');
-        } else {
+
             if($element.attr('viewed')=='false'){
-              $element.removeClass('triggered');
+                $element.addClass('triggered');
+                $element.attr('viewed','true');
             }
         }
     });
