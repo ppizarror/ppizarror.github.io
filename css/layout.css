@@ -49,6 +49,11 @@ header {
     text-align: center;
     /*blur: 100px;*/
     overflow: hidden;
+    z-index: -10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 header.background {
