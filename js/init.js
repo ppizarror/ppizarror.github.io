@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 /*
-/* Init JS
+/* Init JS, se cargan módulos al iniciar la página web
 /*
 -----------------------------------------------------------------------------------*/
 
@@ -9,7 +9,6 @@ jQuery(document).ready(function($) {
     /*----------------------------------------------------*/
     /* FitText Settings
     ------------------------------------------------------ */
-
     setTimeout(function() {
         $('h1.responsive-headline').fitText(1, {
             minFontSize: '40px',
@@ -21,7 +20,6 @@ jQuery(document).ready(function($) {
     /*----------------------------------------------------*/
     /* Smooth Scrolling
     ------------------------------------------------------ */
-
     $('.smoothscroll').on('click', function(e) {
         e.preventDefault();
 
@@ -39,27 +37,20 @@ jQuery(document).ready(function($) {
     /*----------------------------------------------------*/
     /* Highlight the current section in the navigation bar
     ------------------------------------------------------*/
-
     var sections = $("section");
     var navigation_links = $("#nav-wrap a");
 
     sections.waypoint({
-
         handler: function(event, direction) {
-
             var active_section;
-
             active_section = $(this);
             if (direction === "up") active_section = active_section.prev();
-
             var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-
             navigation_links.parent().removeClass("current");
             active_link.parent().addClass("current");
 
         },
         offset: '35%'
-
     });
 
 
@@ -67,12 +58,10 @@ jQuery(document).ready(function($) {
     /*	Make sure that #header-background-image height is
     /* equal to the browser height.
     ------------------------------------------------------ */
-
     $('header').css({
         'height': $(window).height()
     });
     $(window).on('resize', function() {
-
         $('header').css({
             'height': $(window).height()
         });
@@ -85,9 +74,7 @@ jQuery(document).ready(function($) {
     /*----------------------------------------------------*/
     /*	Fade In/Out Primary Navigation
     ------------------------------------------------------*/
-
     $(window).on('scroll', function() {
-
         var h = $('header').height();
         var y = $(window).scrollTop();
         var nav = $('#nav-wrap');
@@ -101,22 +88,18 @@ jQuery(document).ready(function($) {
                 nav.addClass('opaque').fadeIn('fast');
             }
         }
-
     });
 
 
     /*----------------------------------------------------*/
     /*	Modal Popup
     ------------------------------------------------------*/
-
     $('.item-wrap a').magnificPopup({
-
         type: 'inline',
         fixedContentPos: false,
         removalDelay: 200,
         showCloseBtn: false,
         mainClass: 'mfp-fade'
-
     });
 
     $(document).on('click', '.popup-modal-dismiss', function(e) {
@@ -138,6 +121,31 @@ jQuery(document).ready(function($) {
         slideshowSpeed: 7000,
         animationSpeed: 600,
         randomize: false,
+    });
+
+
+    /*----------------------------------------------------*/
+    /*	Se comprueba si es que se ha enviado un mensaje
+    /*----------------------------------------------------*/
+    check_if_msg_sent();
+
+
+    /*----------------------------------------------------*/
+    /*	Se establece el fondo y se añade el scroll
+    /*----------------------------------------------------*/
+    var images_background = [
+        'header-background-5.jpg',
+        'header-background-1-3.jpg',
+        'header-background-3-2.jpg',
+        'header-background-4-2.jpg',
+        'header-background-6.jpg',
+        'header-background-7.jpg'
+    ];
+    var images_indx_random = Math.floor(Math.random() * images_background.length);
+    console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
+    $('.scrollable-home').parallax({
+        imageSrc: 'images/background/' + images_background[images_indx_random],
+        speed: 0.15
     });
 
 
