@@ -61,7 +61,14 @@ jQuery(document).ready(function($) {
     $('header').css({
         'height': $(window).height()
     });
-
+    $(window).on('resize', function() {
+        $('header').css({
+            'height': $(window).height()
+        });
+        $('body').css({
+            'width': $(window).width()
+        })
+    });
 
 
     /*----------------------------------------------------*/
@@ -137,18 +144,22 @@ jQuery(document).ready(function($) {
     var images_indx_random = Math.floor(Math.random() * images_background.length);
     var image_url = 'images/background/' + images_background[images_indx_random];
     console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
-    $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
-    $(function(){
-			$.stellar({
-				horizontalScrolling: false,
-				verticalOffset: 0
-			});
-		});
-    $('.scrollable-home').stellar();
-    // $('.scrollable-home').parallax({
-    //     imageSrc: image_url,
-    //     speed: 0.15
+
+    // Se utiliza stellar
+    // $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+    // $(function() {
+    //     $.stellar({
+    //         horizontalScrolling: false,
+    //         verticalOffset: 0
+    //     });
     // });
+    // $('.scrollable-home').stellar();
+
+    // Se utiliza parallax.js
+    $('.scrollable-home').parallax({
+        imageSrc: image_url,
+        speed: 0.15
+    });
 
 
 });
