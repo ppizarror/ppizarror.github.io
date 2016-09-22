@@ -142,11 +142,13 @@ jQuery(document).ready(function($) {
         'header-background-7.jpg'
     ];
     var images_indx_random = Math.floor(Math.random() * images_background.length);
+    var image_url = 'images/background/' + images_background[images_indx_random];
     console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
-    $('.scrollable-home').parallax({
-        imageSrc: 'images/background/' + images_background[images_indx_random],
-        speed: 0.15
-    });
+    $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+    // $('.scrollable-home').parallax({
+    //     imageSrc: image_url,
+    //     speed: 0.15
+    // });
 
 
 });
