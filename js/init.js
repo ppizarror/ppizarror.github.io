@@ -7,7 +7,18 @@
 jQuery(document).ready(function($) {
 
     /*----------------------------------------------------*/
-    /* FitText Settings
+    /* Detecta si la versión es web o móvil
+    ------------------------------------------------------ */
+    var is_movile_browser = false;
+    if (/Mobi/.test(navigator.userAgent)) {
+        is_movile_browser = true;
+        console.log('Utilizando versión móvil.')
+    } else {
+        console.log('Utilizando versión web.')
+    }
+
+    /*----------------------------------------------------*/
+    /* FitText Configuraciones
     ------------------------------------------------------ */
     setTimeout(function() {
         $('h1.responsive-headline').fitText(1, {
@@ -61,9 +72,18 @@ jQuery(document).ready(function($) {
     $('header').css({
         'height': $(window).height()
     });
-    $(window).on('resize', function() {
-        
-    });
+    if (!is_movile_browser) {
+        $(window).on('resize', function() {
+            $('header').css({
+                'height': $(window).height()
+            });
+            $('body').css({
+                'width': $(window).width()
+            })
+        });
+    }else{
+        console.log('INFO :: Se desactivó el ajuste de pantalla automático.')
+    }
 
 
     /*----------------------------------------------------*/
