@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
                 'width': $(window).width()
             })
         });
-    }else{
+    } else {
         console.log('INFO :: Se desactivó el ajuste de pantalla automático.')
     }
 
@@ -160,21 +160,23 @@ jQuery(document).ready(function($) {
     var image_url = 'images/background/' + images_background[images_indx_random];
     console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
 
-    // Se utiliza stellar
-    // $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
-    // $(function() {
-    //     $.stellar({
-    //         horizontalScrolling: false,
-    //         verticalOffset: 0
-    //     });
-    // });
-    // $('.scrollable-home').stellar();
 
     // Se utiliza parallax.js
-    $('.scrollable-home').parallax({
-        imageSrc: image_url,
-        speed: 0.15
-    });
+    if (!is_movile_browser) {
+        $('.scrollable-home').parallax({
+            imageSrc: image_url,
+            speed: 0.15
+        });
+    }else{
+        $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+        $(function() {
+            $.stellar({
+                horizontalScrolling: false,
+                verticalOffset: 0
+            });
+        });
+        $('.scrollable-home').stellar();
+    }
 
 
 });
