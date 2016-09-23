@@ -81,6 +81,12 @@ jQuery(document).ready(function($) {
             })
         });
     } else {
+        $('header').css({
+            'height': $(window).height()
+        });
+        $('body').css({
+            'width': $(window).width()
+        })
         console.log('INFO :: Se desactivó el ajuste de pantalla automático.')
     }
 
