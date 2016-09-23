@@ -168,14 +168,14 @@ jQuery(document).ready(function($) {
             speed: 0.15
         });
     }else{
-        $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
-        $(function() {
-            $.stellar({
-                horizontalScrolling: false,
-                verticalOffset: 0
-            });
-        });
-        $('.scrollable-home').stellar();
+        // $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+        // $(function() {
+        //     $.stellar({
+        //         horizontalScrolling: false,
+        //         verticalOffset: 0
+        //     });
+        // });
+        // $('.scrollable-home').stellar();
     }
 
 
