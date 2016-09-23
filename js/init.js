@@ -18,6 +18,37 @@ jQuery(document).ready(function($) {
     }
 
     /*----------------------------------------------------*/
+    /*	Se establece el fondo y se añade el scroll
+    /*----------------------------------------------------*/
+    var images_background = [
+        'header-background-5.jpg',
+        'header-background-1-3.jpg',
+        'header-background-3-2.jpg',
+        'header-background-4-2.jpg',
+        'header-background-6.jpg',
+        'header-background-7.jpg'
+    ];
+    var images_indx_random = Math.floor(Math.random() * images_background.length);
+    var image_url = 'images/background/' + images_background[images_indx_random];
+    console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
+
+    if (!is_movile_browser) {
+        $('.scrollable-home').parallax({
+            imageSrc: image_url,
+            speed: 0.15
+        });
+    }else{
+        $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+        // $(function() {
+        //     $.stellar({
+        //         horizontalScrolling: false,
+        //         verticalOffset: 0
+        //     });
+        // });
+        // $('.scrollable-home').stellar();
+    }
+
+    /*----------------------------------------------------*/
     /* FitText Configuraciones
     ------------------------------------------------------ */
     setTimeout(function() {
@@ -143,40 +174,6 @@ jQuery(document).ready(function($) {
     /*	Se comprueba si es que se ha enviado un mensaje
     /*----------------------------------------------------*/
     check_if_msg_sent();
-
-
-    /*----------------------------------------------------*/
-    /*	Se establece el fondo y se añade el scroll
-    /*----------------------------------------------------*/
-    var images_background = [
-        'header-background-5.jpg',
-        'header-background-1-3.jpg',
-        'header-background-3-2.jpg',
-        'header-background-4-2.jpg',
-        'header-background-6.jpg',
-        'header-background-7.jpg'
-    ];
-    var images_indx_random = Math.floor(Math.random() * images_background.length);
-    var image_url = 'images/background/' + images_background[images_indx_random];
-    console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
-
-
-    // Se utiliza parallax.js
-    if (!is_movile_browser) {
-        $('.scrollable-home').parallax({
-            imageSrc: image_url,
-            speed: 0.15
-        });
-    }else{
-        $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
-        // $(function() {
-        //     $.stellar({
-        //         horizontalScrolling: false,
-        //         verticalOffset: 0
-        //     });
-        // });
-        // $('.scrollable-home').stellar();
-    }
 
 
 });
