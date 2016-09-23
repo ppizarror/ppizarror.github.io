@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
             speed: 0.15
         });
     }else{
-        $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
+        
         // $(function() {
         //     $.stellar({
         //         horizontalScrolling: false,
@@ -64,10 +64,8 @@ jQuery(document).ready(function($) {
     ------------------------------------------------------ */
     $('.smoothscroll').on('click', function(e) {
         e.preventDefault();
-
         var target = this.hash,
             $target = $(target);
-
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
         }, 800, 'swing', function() {
