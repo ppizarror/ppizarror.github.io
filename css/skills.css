@@ -1,59 +1,59 @@
 
 /* CARACTERISTICAS */
 .msoffice.triggered{
-  	width: 85%;
+  	width: 75%;
   	-moz-animation: msoffice 2s ease;
   	-webkit-animation: msoffice 2s ease;
 }
 @-moz-keyframes msoffice {
   0%   { width: 0px;  }
-  100% { width: 85%;  }
+  100% { width: 75%;  }
 }
 @-webkit-keyframes msoffice {
   0%   { width: 0px;  }
-  100% { width: 85%;  }
+  100% { width: 75%;  }
 }
 
 .matlab.triggered{
-  	width: 75%;
+  	width: 80%;
   	-moz-animation: matlab 2s ease;
   	-webkit-animation: matlab 2s ease;
 }
 @-moz-keyframes matlab {
   0%   { width: 0px;  }
-  100% { width: 75%;  }
+  100% { width: 80%;  }
 }
 @-webkit-keyframes matlab {
   0%   { width: 0px;  }
-  100% { width: 75%;  }
+  100% { width: 80%;  }
 }
 
 .autocad.triggered{
-  	width: 40%;
+  	width: 30%;
   	-moz-animation: autocad 2s ease;
   	-webkit-animation: autocad 2s ease;
 }
 @-moz-keyframes autocad {
   0%   { width: 0px;  }
-  100% { width: 40%;  }
+  100% { width: 30%;  }
 }
 @-webkit-keyframes autocad {
   0%   { width: 0px;  }
-  100% { width: 40%;  }
+  100% { width: 30%;  }
 }
 
 .pythonlang.triggered{
-  	width: 90%;
+  	width: 95%;
   	-moz-animation: pythonlang 2s ease;
   	-webkit-animation: pythonlang 2s ease;
 }
 @-moz-keyframes pythonlang {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
+  100% { width: 95%;  }
 }
 @-webkit-keyframes pythonlang {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
+  100% { width: 95%;  }
 }
 
 .javalang.triggered{
