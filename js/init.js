@@ -100,7 +100,18 @@ jQuery(document).ready(function($) {
         'header-background-3-2.jpg',
         'header-background-4-2.jpg',
         'header-background-6.jpg',
-        'header-background-7.jpg'
+        'header-background-7.jpg',
+        '94936130.jpg',
+        '47702546.jpg',
+        '71453949.jpg',
+        '09305524.jpg',
+        '07086832.jpg',
+        '15032996.jpg',
+        '63330443.jpg',
+        '45325963.jpg',
+        '16978868.jpg',
+        '16978868.jpg',
+        '34511289.jpg'
     ];
     var images_indx_random = Math.floor(Math.random() * images_background.length);
     var image_url = 'images/background/' + images_background[images_indx_random];
