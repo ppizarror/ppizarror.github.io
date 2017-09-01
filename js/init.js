@@ -217,6 +217,8 @@ jQuery(document).ready(function($) {
             imageSrc: image_url,
             speed: 0.15
         });
+        $('.parallax-mirror').css('-webkit-filter', 'blur(6px)');
+        $('.parallax-mirror').css('filter', 'blur(6px)');
     } else {
         $('.scrollable-home').css('background-image', 'url(' + image_url + ')');
         // $(function() {
