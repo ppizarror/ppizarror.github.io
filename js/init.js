@@ -95,10 +95,7 @@ jQuery(document).ready(function($) {
         console.log('INFO :: Se desactivó el ajuste de pantalla automático.')
     }
 
-
-    /*----------------------------------------------------*/
-    /*	Se establece el fondo y se añade el scroll
-    /*----------------------------------------------------*/
+    // Se establece el fondo y se añade el scroll
     var images_background = [
         ['09305524.jpg', 'center', '#343434'], // 0
         ['67535412.jpg', 'center', '#C96265'], // 1
