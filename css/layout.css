@@ -19,23 +19,15 @@
 ===================================================================== */
 
 
-/* ------------------------------------------------------------------ */
-
-
 /* a. General Styles
 /* ------------------------------------------------------------------ */
-
 body {
     background: #0f0f0f;
 }
 
 
-/* ------------------------------------------------------------------ */
-
-
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
-
 header {
     position: relative;
     height: 800px;
@@ -51,9 +43,7 @@ header {
 
 header.background {}
 
-
 /* vertically center banner section */
-
 header:before {
     content: '';
     display: inline-block;
@@ -116,7 +106,6 @@ header .banner-text hr {
     border-color: rgba(150, 150, 150, .1);
 }
 
-
 /* header social links */
 header .social {
     margin: 24px 0;
@@ -138,7 +127,6 @@ header .social li a {
 header .social li a:hover {
     color: #11ABB0;
 }
-
 
 /* scrolldown link */
 header .scrolldown a {
@@ -164,7 +152,6 @@ header .scrolldown a:hover {
     color: #11ABB0;
 }
 
-
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -173,7 +160,6 @@ header .scrolldown a:hover {
     border: none;
     outline: none;
 }
-
 
 /* nav-wrap */
 #nav-wrap {
@@ -191,7 +177,6 @@ header .scrolldown a:hover {
 .opaque {
     background-color: #333;
 }
-
 
 /* hide toggle button */
 #nav-wrap>a.mobile-btn {
@@ -212,7 +197,6 @@ ul#nav li {
     height: 48px;
     display: inline-block;
 }
-
 
 /* Links */
 ul#nav li a {
@@ -430,7 +414,6 @@ ul#nav li.current a {
     color: #95A3A3;
 }
 
-
 /* Portfolio Content */
 #portfolio-wrapper .columns {
     margin-bottom: 36px;
@@ -451,7 +434,6 @@ ul#nav li.current a {
     display: block;
     cursor: pointer;
 }
-
 
 /* overlay */
 .portfolio-item .item-wrap .overlay {
@@ -656,7 +638,6 @@ ul#nav li.current a {
     font-size: 17px;
 }
 
-
 /*#
 call-to-action .button {
 	color:#fff;
@@ -717,7 +698,6 @@ call-to-action .button {
     float: left;
     color: #fff;
 }
-
 
 /*	Blockquotes */
 #testimonials blockquote {
@@ -813,7 +793,6 @@ call-to-action .button {
     clear: both;
 }
 
-
 /* No JavaScript Fallback */
 
 /* If you are not using another script, such as Modernizr, make sure you
@@ -873,7 +852,6 @@ call-to-action .button {
     cursor: default;
 }
 
-
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
 #contact {
@@ -932,7 +910,6 @@ call-to-action .button {
 #contact .header-col {
     padding-top: 6px;
 }
-
 
 /* contact form */
 #contact form {
@@ -1098,7 +1075,6 @@ footer a:hover, footer a:focus {
     color: #fff;
 }
 
-
 /* copyright */
 footer .copyright {
     margin: 0;
@@ -1134,12 +1110,15 @@ footer .copyright li:first-child:before {
     display: none;
 }
 
-
 /* social links */
 footer .social-links {
     margin: 18px 0 30px 0;
     padding: 0;
     font-size: 30px;
+}
+
+footer a:hover{
+    color: #11abb0;
 }
 
 footer .social-links li {
@@ -1153,7 +1132,6 @@ footer .social-links li {
 footer .social-links li:first-child {
     margin-left: 0;
 }
-
 
 /* Go To Top Button */
 #go-top {
