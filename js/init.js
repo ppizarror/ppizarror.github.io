@@ -99,33 +99,28 @@ jQuery(document).ready(function($) {
     $('#background-page-header-colored').css('background-color', chosencolor);
     $('#background-page-header-colored').fadeIn(200);
     console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
-    if (!is_movile_browser) {
-        var back_img = new Image();
-        back_img.onload = function() {
-            if (parallaxenabled) {
-                $('#background-page-header').parallax({
-                    imageSrc: image_url,
-                    speed: 0.15
-                });
-            } else {
-                $('#background-page-header').css('-webkit-background-size', 'cover');
-                $('#background-page-header').css('-moz-background-size', 'cover');
-                $('#background-page-header').css('-o-background-size', 'cover');
-                $('#background-page-header').css('background-size', 'cover');
-                $('#background-page-header').css('max-width', '100%');
-                $('#background-page-header').css('width', $(window).width());
-                $('#background-page-header').css('background-image', 'url(' + image_url + ')');
-                random_blur('#background-page-header');
-            }
-            setTimeout(function() {
-                $('#background-page-header-colored').fadeOut('slow');
-            }, timeoutFadeInWallpaperAferLoad);
+    var back_img = new Image();
+    back_img.onload = function() {
+        if (parallaxenabled && !is_movile_browser) {
+            $('#background-page-header').parallax({
+                imageSrc: image_url,
+                speed: 0.15
+            });
+        } else {
+            $('#background-page-header').css('-webkit-background-size', 'cover');
+            $('#background-page-header').css('-moz-background-size', 'cover');
+            $('#background-page-header').css('-o-background-size', 'cover');
+            $('#background-page-header').css('background-size', 'cover');
+            $('#background-page-header').css('max-width', '100%');
+            $('#background-page-header').css('width', $(window).width());
+            $('#background-page-header').css('background-image', 'url(' + image_url + ')');
+            random_blur('#background-page-header');
         }
-        back_img.src = image_url;
-
-    } else {
-        $('#background-page-header').css('background-image', 'url(' + image_url + ')');
+        setTimeout(function() {
+            $('#background-page-header-colored').fadeOut('slow');
+        }, timeoutFadeInWallpaperAferLoad);
     }
+    back_img.src = image_url;
 
     // Se añade evento resize del fondo
     $(window).resize(function() {
