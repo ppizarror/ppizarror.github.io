@@ -30,21 +30,13 @@ jQuery(document).ready(function($) {
     });
     if (!is_movile_browser) {
         $(window).on('resize', function() {
-            $('header').css({
-                'height': $(window).height()
-            });
-            $('body').css({
-                'width': $(window).width()
-            })
+            $('header').css('height', $(window).height());
+            $('body').css('width', $(window).width());
         });
     } else {
-        $('header').css({
-            'height': $(window).height()
-        });
-        $('body').css({
-            'width': $(window).width()
-        })
-        console.log('Se desactivó el ajuste de pantalla automático')
+        $('header').css('height', $(window).height());
+        $('body').css('width', $(window).width());
+        console.log('Se desactivó el ajuste de pantalla automático');
     }
 
     // Escribe los banner sociales
@@ -107,13 +99,15 @@ jQuery(document).ready(function($) {
                 speed: 0.15
             });
         } else {
+            $('#background-page-header').css({
+                'background': chosencolor + ' url(' + image_url + ') ' + image_pos + ' no-repeat fixed',
+                'background-attachment': 'fixed',
+            });
             $('#background-page-header').css('-webkit-background-size', 'cover');
             $('#background-page-header').css('-moz-background-size', 'cover');
             $('#background-page-header').css('-o-background-size', 'cover');
             $('#background-page-header').css('background-size', 'cover');
-            $('#background-page-header').css('max-width', '100%');
             $('#background-page-header').css('width', $(window).width());
-            $('#background-page-header').css('background-image', 'url(' + image_url + ')');
             random_blur('#background-page-header');
         }
         setTimeout(function() {
@@ -128,19 +122,9 @@ jQuery(document).ready(function($) {
     });
 
     // Navegación por fadein/out
+    navWrapTrigger();
     $(window).on('scroll', function() {
-        var h = $('header').height();
-        var y = $(window).scrollTop();
-        var nav = $('#nav-wrap');
-        if ((y > h * .20) && (y < h) && ($(window).outerWidth() > 768)) {
-            nav.fadeOut('fast');
-        } else {
-            if (y < h * .20) {
-                nav.removeClass('opaque').fadeIn('fast');
-            } else {
-                nav.addClass('opaque').fadeIn('fast');
-            }
-        }
+        navWrapTrigger();
     });
 
     // Modal popup
