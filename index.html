@@ -21,22 +21,22 @@
 	<meta property="og:url" content="http://ppizarror.com" />
 
     <!-- Favicón -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="resources/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resources/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="resources/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resources/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="resources/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="resources/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Estilos -->
@@ -45,12 +45,17 @@
     <link rel="stylesheet" href="css/layout.min.css">
     <link rel="stylesheet" href="css/media-queries.min.css">
     <link rel="stylesheet" href="css/magnific-popup.min.css">
+	<link rel="stylesheet" href="css/pace.min.css">
 
     <!-- Importación js inicial -->
     <script type="text/javascript" src="js/modernizr.js"></script>
 </head>
 
 <body>
+	<div id="background-page-header">
+    </div>
+	<div id="background-page-header-colored">
+    </div>
     <header id="home" class='scrollable-home' data-stellar-background-ratio="0.5">
         <nav id="nav-wrap">
             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Mostrar menú</a>
@@ -74,14 +79,6 @@
 				</h3>
                 <hr />
                 <ul class="social">
-                    <!-- <li><a href="https://www.facebook.com/ppizarror1"><i class="fa fa-facebook" title="Facebook"></i></a></li> -->
-                    <li><a href="https://github.com/ppizarror"><i class="fa fa-github" title="GitHub"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/ppizarror"><i class="fa fa-linkedin" title="Linkedin"></i></a></li>
-                    <li><a href="mailto:pablo.pizarro@ing.uchile.cl"><i class="fa fa-envelope" title="Correo electrónico"></i></a></li>
-                    <!-- <li><a href="https://twitter.com/_ppizarror"><i class="fa fa-twitter" title="Twitter"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
                 </ul>
             </div>
         </div>
@@ -174,7 +171,6 @@
             </div>
         </div>
     </section>
-    <!-- Fin acerca de -->
 
     <section id="resume">
         <div class="row education">
@@ -239,7 +235,6 @@
                 </div>
             </div>
         </div>
-        <!-- Fin sección educación -->
 
         <div class="row work">
             <div class="three columns header-col">
@@ -315,7 +310,6 @@
             </div>
         </div>
     </section>
-    <!-- Fin sección experiencia -->
 
     <section id="contact" id="contacto">
         <div class="row section-head">
@@ -370,7 +364,7 @@
                         <br>
                     </p>
                 </div>
-                <!-- TWITTER
+                <!--
 				<div class="widget widget_tweets">
 				    <a class="twitter-timeline" data-lang="es" data-theme="dark" href="https://twitter.com/_ppizarror"></a>
 				    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -384,24 +378,9 @@
         <div class="row">
             <div class="twelve columns">
                 <ul class="social-links">
-                    <!-- <li><a href="https://www.facebook.com/ppizarror1"><i class="fa fa-facebook" title="Facebook"></i></a></li> -->
-                    <li><a href="https://github.com/ppizarror"><i class="fa fa-github" title="GitHub"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/ppizarror"><i class="fa fa-linkedin" title="Linkedin"></i></a></li>
-                    <li><a href="mailto:pablo.pizarro@ing.uchile.cl"><i class="fa fa-envelope" title="Correo electrónico"></i></a></li>
-                    <!-- <li><a href="https://twitter.com/_ppizarror"><i class="fa fa-twitter" title="Twitter"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
                 </ul>
                 <ul class="copyright">
                     <li>&copy; Copyright 2017 ppizarror</li>
-                    <!-- <li>
-					<script type="text/javascript" src="http://widget.supercounters.com/texthit.js"></script>
-					<script type="text/javascript">
-					    var sc_texthit_var = sc_texthit_var || [];
-					    sc_text_hit(1308079, "visitas", "303030");
-					</script><br><noscript><a href="http://www.supercounters.com">Tumblr Hit Counter</a></noscript>
-					</li> -->
                 </ul>
             </div>
             <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
@@ -412,7 +391,7 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/pace.min.js"></script>
-    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.fittext.min.js"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/activate-skills-bars.min.js"></script>
@@ -422,7 +401,10 @@
     <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
     <script type="text/javascript" src="js/sent-email.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
-    <script type="text/javascript" src="js/init.min.js"></script>
+	<script type="text/javascript" src="js/config.min.js"></script>
+	<script type="text/javascript" src="js/utils.min.js"></script>
+	<script type="text/javascript" src="http://latex.ppizarror.com/Template-Informe/js/wallpaperdb.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
 </body>
 
 </html>
