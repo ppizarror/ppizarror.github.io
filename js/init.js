@@ -143,4 +143,7 @@ jQuery(document).ready(function($) {
     // Se comprueba si se envió un mensaje
     check_if_msg_sent();
 
+    // Se agrega un bull a cada date
+    $('#resume .date').before('<span class="bullOnExperience"> &bull; </span>');
+
 });

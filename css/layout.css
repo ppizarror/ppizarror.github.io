@@ -21,6 +21,7 @@
 
 /* a. General Styles
 /* ------------------------------------------------------------------ */
+
 body {
     background: #0f0f0f;
     height: 100%;
@@ -32,6 +33,7 @@ body {
 
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
+
 header {
     position: relative;
     height: 800px;
@@ -47,7 +49,9 @@ header {
 
 header.background {}
 
+
 /* vertically center banner section */
+
 header:before {
     content: '';
     display: inline-block;
@@ -110,7 +114,9 @@ header .banner-text hr {
     border-color: rgba(150, 150, 150, .1);
 }
 
+
 /* header social links */
+
 header .social {
     margin: 24px 0;
     padding: 0;
@@ -132,7 +138,9 @@ header .social li a:hover {
     color: #11ABB0;
 }
 
+
 /* scrolldown link */
+
 header .scrolldown a {
     position: absolute;
     bottom: 30px;
@@ -156,8 +164,10 @@ header .scrolldown a:hover {
     color: #11ABB0;
 }
 
+
 /* primary navigation
 --------------------------------------------------------------------- */
+
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
     margin: 0;
     padding: 0;
@@ -165,7 +175,9 @@ header .scrolldown a:hover {
     outline: none;
 }
 
+
 /* nav-wrap */
+
 #nav-wrap {
     font: 12px 'opensans-bold', sans-serif;
     width: 100%;
@@ -182,7 +194,9 @@ header .scrolldown a:hover {
     background-color: #333;
 }
 
+
 /* hide toggle button */
+
 #nav-wrap>a.mobile-btn {
     display: none;
 }
@@ -202,7 +216,9 @@ ul#nav li {
     display: inline-block;
 }
 
+
 /* Links */
+
 ul#nav li a {
     /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
     display: inline-block;
@@ -226,8 +242,10 @@ ul#nav li.current a {
     color: #F06000;
 }
 
+
 /* c. About Section
 /* ------------------------------------------------------------------ */
+
 #about {
     background: #2B2B2B;
     padding-top: 96px;
@@ -292,8 +310,10 @@ ul#nav li.current a {
     font-size: 20px;
 }
 
+
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
+
 #resume {
     background: #fff;
     padding-top: 90px;
@@ -317,7 +337,7 @@ ul#nav li.current a {
 
 #resume h1 span {
     border-bottom: 3px solid #11ABB0;
-    padding-bottom: 6px;
+    padding-bottom: 3px;
 }
 
 #resume h3 {
@@ -325,7 +345,7 @@ ul#nav li.current a {
 }
 
 #resume .header-col {
-    padding-top: 9px;
+    padding-top: 5px;
 }
 
 #resume .main-col {
@@ -355,8 +375,10 @@ ul#nav li.current a {
     margin-top: 6px;
 }
 
+
 /*	Skill Bars
 /*----------------------------------------------*/
+
 .bars {
     width: 95%;
     float: left;
@@ -400,6 +422,7 @@ ul#nav li.current a {
     border-radius: 3px 0 0 3px;
 }
 
+
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
 
@@ -418,7 +441,9 @@ ul#nav li.current a {
     color: #95A3A3;
 }
 
+
 /* Portfolio Content */
+
 #portfolio-wrapper .columns {
     margin-bottom: 36px;
 }
@@ -439,7 +464,9 @@ ul#nav li.current a {
     cursor: pointer;
 }
 
+
 /* overlay */
+
 .portfolio-item .item-wrap .overlay {
     position: absolute;
     left: 0;
@@ -497,7 +524,9 @@ ul#nav li.current a {
     margin-bottom: 0;
 }
 
+
 /* on hover */
+
 .portfolio-item:hover .overlay {
     opacity: 1;
     -moz-opacity: 1;
@@ -510,7 +539,9 @@ ul#nav li.current a {
     filter: alpha(opacity=100);
 }
 
+
 /* popup modal */
+
 .popup-modal {
     max-width: 550px;
     background: #fff;
@@ -569,10 +600,13 @@ ul#nav li.current a {
     margin-left: 24px;
 }
 
+
 /* fadein/fadeout effect for modal popup
 /* ------------------------------------------------------------------ */
 
+
 /* content at start */
+
 .mfp-fade.mfp-wrap .mfp-content .popup-modal {
     opacity: 0;
     -webkit-transition: all 200ms ease-in-out;
@@ -582,15 +616,20 @@ ul#nav li.current a {
     transition: all 200ms ease-in-out;
 }
 
+
 /* content fadein */
+
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
     opacity: 1;
 }
 
+
 /* content fadeout */
+
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
     opacity: 0;
 }
+
 
 /* f. Call To Action Section
 /* ------------------------------------------------------------------ */
@@ -642,6 +681,7 @@ ul#nav li.current a {
     font-size: 17px;
 }
 
+
 /*#
 call-to-action .button {
 	color:#fff;
@@ -659,8 +699,10 @@ call-to-action .button {
     color: #D8D8D8;
 }
 
+
 /* g. Testimonials
 /* ------------------------------------------------------------------ */
+
 #testimonials {
     background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
     background-size: cover !important;
@@ -703,7 +745,9 @@ call-to-action .button {
     color: #fff;
 }
 
+
 /*	Blockquotes */
+
 #testimonials blockquote {
     margin: 0 0px 30px 0px;
     padding-left: 0;
@@ -740,10 +784,13 @@ call-to-action .button {
     border: none
 }
 
+
 /* Flex Slider
 /* ------------------------------------------------------------------ */
 
+
 /* Reset */
+
 .flexslider a:active, .flexslider a:focus {
     outline: none;
 }
@@ -759,7 +806,9 @@ call-to-action .button {
     padding: 0;
 }
 
+
 /* Necessary Styles */
+
 .flexslider {
     position: relative;
     zoom: 1;
@@ -775,19 +824,25 @@ call-to-action .button {
     position: relative;
 }
 
+
 /* Hide the slides before the JS is loaded. Avoids image jumping */
+
 .flexslider .slides>li {
     display: none;
     -webkit-backface-visibility: hidden;
 }
 
+
 /* Suggested container for slide animation setups. Can replace this with your own */
+
 .flex-container {
     zoom: 1;
     position: relative;
 }
 
+
 /* Clearfix for .slides */
+
 .slides:before, .slides:after {
     content: " ";
     display: table;
@@ -797,15 +852,20 @@ call-to-action .button {
     clear: both;
 }
 
+
 /* No JavaScript Fallback */
+
 
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
+
 .no-js .slides>li:first-child {
     display: block;
 }
 
+
 /* Slider Styles */
+
 .slides {
     zoom: 1;
 }
@@ -815,7 +875,9 @@ call-to-action .button {
     overflow: hidden;
 }
 
+
 /* Control Nav */
+
 .flex-control-nav {
     width: 100%;
     position: absolute;
@@ -856,8 +918,10 @@ call-to-action .button {
     cursor: default;
 }
 
+
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
+
 #contact {
     background: #191919;
     padding-top: 96px;
@@ -915,7 +979,9 @@ call-to-action .button {
     padding-top: 6px;
 }
 
+
 /* contact form */
+
 #contact form {
     margin-bottom: 30px;
 }
@@ -1038,7 +1104,9 @@ call-to-action .button {
     top: 17px;
 }
 
+
 /* Twitter Feed */
+
 #twitter {
     margin-top: 12px;
     padding: 0;
@@ -1059,8 +1127,10 @@ call-to-action .button {
     border: none;
 }
 
+
 /* i. Footer
 /* ------------------------------------------------------------------ */
+
 footer {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -1079,7 +1149,9 @@ footer a:hover, footer a:focus {
     color: #fff;
 }
 
+
 /* copyright */
+
 footer .copyright {
     margin: 0;
     padding: 0;
@@ -1114,14 +1186,16 @@ footer .copyright li:first-child:before {
     display: none;
 }
 
+
 /* social links */
+
 footer .social-links {
     margin: 18px 0 30px 0;
     padding: 0;
     font-size: 30px;
 }
 
-footer a:hover{
+footer a:hover {
     color: #11abb0;
 }
 
@@ -1137,7 +1211,9 @@ footer .social-links li:first-child {
     margin-left: 0;
 }
 
+
 /* Go To Top Button */
+
 #go-top {
     position: absolute;
     top: -24px;
@@ -1167,7 +1243,9 @@ footer .social-links li:first-child {
     background-color: #0F9095;
 }
 
+
 /* Background scrollable image */
+
 #background-page-header {
     z-index: -2;
     width: 100%;
@@ -1189,4 +1267,9 @@ footer .social-links li:first-child {
     left: 0;
     right: 0;
     display: none;
+}
+
+.bullOnExperience {
+    margin-left: 5px;
+    margin-right: 5px;
 }
