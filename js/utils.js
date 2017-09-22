@@ -55,21 +55,6 @@ function fadein_css(idelem, t) {
     $(idelem).css('animation-fill-mode', 'forwards');
 }
 
-// Genera aleatoriamente un elemento con blur
-function random_blur(idelem) {
-    if (Math.random() >= blurprobability / 100) {
-        for (var i = 0; i < 100; i++) {
-            blur = parseInt(Math.random() * 100);
-            if (blur >= blurlimits[0] && blur <= blurlimits[1]) {
-                $(idelem).css('filter', String.format('blur({0}px)', blur));
-                $(idelem).css('transform', 'scale(1.05)');
-                console.log(String.format('Se define blur en {0}px', blur));
-                return;
-            }
-        }
-    }
-}
-
 // Activa o desactiva el nav-wrap
 function navWrapTrigger() {
     var h = $('header').height();

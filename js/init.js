@@ -88,9 +88,9 @@ jQuery(document).ready(function($) {
     });
 
     // Se establece el fondo y se añade el scroll
-    $('#background-page-header-colored').css('background-color', chosencolor);
+    $('#background-page-header-colored').css('background-color', wallpaper_db.color);
     $('#background-page-header-colored').fadeIn(200);
-    console.log('Estableciendo el fondo de pantalla ' + images_indx_random);
+    console.log('Estableciendo el fondo de pantalla ' + wallpaper_db.index);
     var back_img = new Image();
     back_img.onload = function() {
         if (parallaxenabled && !is_movile_browser) {
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
             });
         } else {
             $('#background-page-header').css({
-                'background': chosencolor + ' url(' + image_url + ') ' + image_pos + ' no-repeat fixed',
+                'background': wallpaper_db.color + ' url(' + wallpaper_db.image + ') ' + wallpaper_db.position + ' no-repeat fixed',
                 'background-attachment': 'fixed',
             });
             $('#background-page-header').css('-webkit-background-size', 'cover');
@@ -108,13 +108,13 @@ jQuery(document).ready(function($) {
             $('#background-page-header').css('-o-background-size', 'cover');
             $('#background-page-header').css('background-size', 'cover');
             $('#background-page-header').css('width', $(window).width());
-            random_blur('#background-page-header');
+            wallpaper_db_random_blur('#background-page-header', blurprobability, blurlimits);
         }
         setTimeout(function() {
             $('#background-page-header-colored').fadeOut('slow');
         }, timeoutFadeInWallpaperAferLoad);
     }
-    back_img.src = image_url;
+    back_img.src =  wallpaper_db.image;
 
     // Se añade evento resize del fondo
     $(window).resize(function() {
