@@ -2,7 +2,7 @@
     "name": "ppizarror",
     "icons": [
         {
-            "src": "/resources/favicon/android-chrome-192x192.png",
+            "src": "resources/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         }
