@@ -23,6 +23,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var blurlimits = [3, 10]; // Límites de blur
 var blurprobability = 50; // Probabilidad de blur
-var href_images_parent = 'http://latex.ppizarror.com/Template-Informe/images/'; // Directorio de wallpapers
 var parallaxenabled = false; // Activa el parallax
 var timeoutFadeInWallpaperAferLoad = 600; // Tiempo de espera tras cargar imagen de fondo
