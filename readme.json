@@ -1,14 +1,14 @@
 {
     "PROJECT": {
-        "NAME": "ppizarror",
+        "NAME": "ppizarror.com",
         "ICON": {
             "IMAGE": "http://ppizarror.com/icon.png",
-            "ALT": "ppizarror",
+            "ALT": "ppizarror.com",
             "WIDTH": 200,
             "HEIGHT": 200
         },
         "URL": "http://ppizarror.com/",
-        "URL_TITLE": "ppizarror"
+        "URL_TITLE": "ppizarror.com"
     },
     "AUTHOR": {
         "NAME": "Pablo Pizarro R.",
