@@ -9,8 +9,7 @@
 <a href="https://opensource.org/licenses/MIT/"><img alt="Licencia MIT" src="http://ppizarror.com/badges/licenciamit.svg" /></a>
 </div><br />
 
-## Licencia
-Este proyecto está licenciado bajo la licencia MIT [https://opensource.org/licenses/MIT]
+
 
 ## Autor
 <a href="http://ppizarror.com" title="ppizarror">Pablo Pizarro R.</a> | 2016 - 2017
