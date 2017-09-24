@@ -1,0 +1,37 @@
+{
+    "PROJECT": {
+        "NAME": "ppizarror",
+        "ICON": {
+            "IMAGE": "http://ppizarror.com/icon.png",
+            "ALT": "ppizarror",
+            "WIDTH": 200,
+            "HEIGHT": 200
+        },
+        "URL": "http://ppizarror.com/",
+        "URL_TITLE": "ppizarror"
+    },
+    "AUTHOR": {
+        "NAME": "Pablo Pizarro R.",
+        "URL": "http://ppizarror.com",
+        "ALT": "ppizarror",
+        "DATE": "2016 - 2017",
+        "SECTION": {
+            "TITLE": "Autor",
+            "SHOW": true
+        }
+    },
+    "DESCRIPTION": "Página personal en github",
+    "BADGES": {
+        "0": {
+            "IMAGE": "http://ppizarror.com/badges/autor.svg",
+            "HREF": "http://ppizarror.com",
+            "ALT": "@ppizarror"
+        },
+        "1": {
+            "IMAGE": "http://ppizarror.com/badges/licenciamit.svg",
+            "HREF": "https://opensource.org/licenses/MIT/",
+            "ALT": "Licencia MIT"
+        }
+    },
+    "CONTENT": "readme.content.md"
+}
