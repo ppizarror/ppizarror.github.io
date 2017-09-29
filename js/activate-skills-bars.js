@@ -15,9 +15,9 @@ function activate_skills_bars() {
         if ((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
 
-            if($element.attr('viewed')=='false'){
+            if ($element.attr('data-viewed') == 'false') {
                 $element.addClass('triggered');
-                $element.attr('viewed','true');
+                $element.attr('viewed', 'true');
             }
         }
     });
