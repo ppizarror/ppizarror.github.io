@@ -65,13 +65,26 @@
 	<link rel="stylesheet" href="css/pace.min.css">
 
 	<!-- Importación js inicial -->
-	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/config.min.js"></script>
+	<script type="text/javascript" src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/pace.min.js"></script>
+	<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fittext.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.min.js"></script>
+	<script type="text/javascript" src="js/localization/messages_es.min.js"></script>
+	<script type="text/javascript" src="js/contactmail.min.js"></script>
+	<script type="text/javascript" src="js/utils.min.js"></script>
+	<script type="text/javascript" src="js/onstartup.min.js"></script>
 </head>
 
 <body>
 	<div id="background-page-header"></div>
 	<div id="background-page-header-colored"></div>
-	<header id="home" class='scrollable-home'>
+	<header id="home" class='scrollable-home menuelem'>
 		<nav id="nav-wrap">
 			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Mostrar menú</a>
 			<a class="mobile-btn" href="#" title="Hide navigation">Ocultar menú</a>
@@ -88,12 +101,20 @@
 				<h3>
 					Estudiante de Ingeniería Civil mención en Estructuras,
 					Construcción y Geotecnia, <a href="http://ingenieria.uchile.cl/">Universidad de Chile</a>.
-                    <!-- Profesor particular de matemáticas, física y computación. -->
                     Aficionado a la programación, las ciencias, a la música, y los juegos.
 					Creador de múltiples proyectos. <a class="smoothscroll" href="#about">Acerca de mí</a>.
 				</h3>
 				<hr />
-				<ul class="social"></ul>
+				<ul class="social">
+					<!--<li><a href="http://facebook.ppizarror.com"><i class="fa fa-facebook" title="Facebook"></i></a></li>-->
+					<li><a href="http://github.ppizarror.com"><i class="fa fa-github" title="GitHub"></i></a></li>
+					<li><a href="http://linkedin.ppizarror.com"><i class="fa fa-linkedin" title="Linkedin"></i></a></li>
+					<li><a href="mailto:pablo.pizarro@ing.uchile.cl"><i class="fa fa-envelope" title="Correo electrónico"></i></a></li>
+					<!--<li><a href="http://twitter.ppizarror.com"><i class="fa fa-twitter" title="Twitter"></i></a></li>-->
+					<!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+					<!--<li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+					<!--<li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+				</ul>
 			</div>
 		</div>
 		<p class="scrolldown">
@@ -101,7 +122,7 @@
 		</p>
 	</header>
 
-	<section id="about">
+	<section id="about" class="menuelem">
 		<div class="row">
 			<div class="three columns header-col">
 				<img class="profile-pic" src="https://avatars0.githubusercontent.com/u/12925256" alt="" />
@@ -328,7 +349,7 @@
 		</div>
 	</section>
 
-	<section id="contact">
+	<section id="contact" class="menuelem">
 		<div class="row section-head">
 			<div class="two columns header-col">
 				<h1><span>HABLEMOS.</span></h1>
@@ -341,25 +362,26 @@
 		</div>
 		<div class="row">
 			<div class="eight columns">
-				<form action="https://formspree.io/pablopizarro9@gmail.com" method="POST" id="contactform" name="contactForm">
+				<form action="https://formspree.io/pablo.pizarro@ing.uchile.cl" method="POST" id="contactform" name="contactForm">
 					<input type="text" name="_gotcha" style="display:none" />
 					<input type="hidden" name="_next" value="?msg_sent=1#contact" />
+					<input type="hidden" name="_language" value="es" />
 					<fieldset>
 						<div>
-							<label for="contactName">Nombre <span class="required" title="Al menos 5 carácteres">*</span></label>
-							<input type="text" value="" size="35" id="contactName" class="contactName" name="name" placeholder="Ingrese su nombre." autocomplete="off">
+							<label for="contactName">Nombre <span class="required" title="Al menos 5 caracteres">*</span></label>
+							<input type="text" value="" size="35" id="contactName" class="contactName" name="name" placeholder="Ingrese su nombre" autocomplete="off">
 						</div>
 						<div>
 							<label for="contactEmail">Email <span class="required">*</span></label>
-							<input type="email" value="" size="35" id="contactEmail" class="contactEmail" name="_replyto" placeholder="Ingrese un email válido." autocomplete="off">
+							<input type="email" value="" size="35" id="contactEmail" class="contactEmail" name="_replyto" placeholder="Ingrese un email válido" autocomplete="off">
 						</div>
 						<div>
 							<label for="contactSubject">Tema</label>
-							<input type="text" value="" size="35" id="contactSubject" class="contactSubject" name="_subject" placeholder="Ingrese el tema de su mensaje." autocomplete="off">
+							<input type="text" value="" size="35" id="contactSubject" class="contactSubject" name="_subject" placeholder="Ingrese el tema de su mensaje" autocomplete="off">
 						</div>
 						<div>
 							<label for="contactMessage">Mensaje <span class="required">*</span></label>
-							<input type="text" id="contactMessage" class="contactMessage" name="message" placeholder="Su mensaje." style="resize: none;" autocomplete="off">
+							<input type="text" id="contactMessage" class="contactMessage" name="message" placeholder="Su mensaje" style="resize: none;" autocomplete="off">
 						</div>
 						<div>
 							<button class="submit button-close-after-send" value="Send" type="submit">Enviar</button>
@@ -395,25 +417,6 @@
 			<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
 		</div>
 	</footer>
-
-	<!-- Importación js -->
-	<script type="text/javascript" src="js/config.min.js"></script>
-	<script type="text/javascript" src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="js/pace.min.js"></script>
-	<script type="text/javascript" src="js/waypoints.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fittext.min.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="js/activate-skills-bars.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/localization/messages_es.min.js"></script>
-	<script type="text/javascript" src="js/form-validation.min.js"></script>
-	<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
-	<script type="text/javascript" src="js/sent-email.min.js"></script>
-	<script type="text/javascript" src="js/parallax.min.js"></script>
-	<script type="text/javascript" src="js/utils.min.js"></script>
-	<script type="text/javascript" src="js/init.min.js"></script>
 </body>
 
 </html>

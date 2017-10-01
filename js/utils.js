@@ -40,10 +40,8 @@ function getRandomInt(min, max) {
 
 // Escribe los banner sociales
 function writeSocialBar() {
-    id_social = ['.social', '.social-links'];
-    for (var i = 0; i < id_social.length; i++) {
-        $(id_social[i]).html('<!--<li><a href="https://www.facebook.com/ppizarror1"><i class="fa fa-facebook" title="Facebook"></i></a></li>--><li><a href="https://github.com/ppizarror"><i class="fa fa-github" title="GitHub"></i></a></li><li><a href="https://www.linkedin.com/in/ppizarror"><i class="fa fa-linkedin" title="Linkedin"></i></a></li><li><a href="mailto:pablo.pizarro@ing.uchile.cl"><i class="fa fa-envelope" title="Correo electrónico"></i></a></li><!--<li><a href="https://twitter.com/_ppizarror"><i class="fa fa-twitter" title="Twitter"></i></a></li><li><a href="#"><i class="fa fa-google-plus"></i></a></li><li><a href="#"><i class="fa fa-instagram"></i></a></li><li><a href="#"><i class="fa fa-skype"></i></a></li>-->');
-    }
+    socialhtml = $('.social').html();
+    $('.social-links').html(socialhtml);
 }
 
 // Anima un elemento con css fadeIn
