@@ -24,6 +24,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // Funciones al cargar la página web
 jQuery(document).ready(function($) {
 
+    // Muestra el resumen
+    if (showresume) {
+        $('#resume').attr('style', '');
+        $('#resumemenu').fadeIn(100);
+    }
+
     // El fondo tiene misma altura que la ventana
     $('header').css({
         'height': $(window).height()
@@ -114,7 +120,7 @@ jQuery(document).ready(function($) {
             $('#background-page-header-colored').fadeOut('slow');
         }, timeoutFadeInWallpaperAferLoad);
     }
-    back_img.src =  wallpaper_db.image;
+    back_img.src = wallpaper_db.image;
 
     // Se añade evento resize del fondo
     $(window).resize(function() {

@@ -78,7 +78,7 @@
 			<ul id="nav" class="nav">
 				<li class="current"><a class="smoothscroll" href="#home">Inicio</a></li>
 				<li><a class="smoothscroll" href="#about">Acerca De</a></li>
-				<li><a class="smoothscroll" href="#resume">Resumen</a></li>
+				<li id="resumemenu" style="display:none;"><a class="smoothscroll" href="#resume">Resumen</a></li>
 				<li><a class="smoothscroll" href="#contact">Contacto</a></li>
 			</ul>
 		</nav>
@@ -176,14 +176,14 @@
 					</li>
 					<li>Otros
 						<ul>
-							<li><a href="http://ppizarror.com/clasificacion-suelos-gruesos/">Clasificación de suelos gruesos</a></li>
 							<li><a href="http://ppizarror.com/wallpaper-db/">Wallpaper-db</a></li>
+							<li><a href="http://latex.ppizarror.com/stats/">Stats Template-Latex</a></li>
+							<li><a href="https://github.com/Template-Latex/cwl-docs">Autocompletado para Template-Latex</a></li>
 							<li><a href="https://github.com/ppizarror/bayesian-rayleigh-disperse">Bayesian rayleigh disperse</a></li>
 							<li><a href="http://ppizarror.com/python-pygame-menu/">python-pygame-menu</a></li>
 							<li><a href="http://ppizarror.com/estadistica-paros/">estadistica-paros</a></li>
-							<li><a href="http://latex.ppizarror.com/stats/">Stats Template-Latex</a></li>
 							<li><a href="https://github.com/Template-Latex/Export-Subtemplate">Export-Subtemplate</a></li>
-							<li><a href="https://github.com/Template-Latex/cwl-docs">Autocompletado para Template-Latex</a></li>
+							<li><a href="http://ppizarror.com/clasificacion-suelos-gruesos/">Clasificación de suelos gruesos</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -203,7 +203,7 @@
 		</div>
 	</section>
 
-	<section id="resume">
+	<section id="resume" style="display:none;">
 		<div class="row education">
 			<div class="three columns header-col">
 				<h1><span>EDUCACIÓN</span></h1>
@@ -397,6 +397,8 @@
 	</footer>
 
 	<!-- Importación js -->
+	<script type="text/javascript" src="js/config.min.js"></script>
+	<script type="text/javascript" src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="js/pace.min.js"></script>
@@ -410,10 +412,8 @@
 	<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
 	<script type="text/javascript" src="js/sent-email.min.js"></script>
 	<script type="text/javascript" src="js/parallax.min.js"></script>
-	<script type="text/javascript" src="js/config.min.js"></script>
 	<script type="text/javascript" src="js/utils.min.js"></script>
-	<script type="text/javascript" src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="js/init.min.js"></script>
 </body>
 
 </html>
