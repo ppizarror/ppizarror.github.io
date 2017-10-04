@@ -272,6 +272,10 @@ ul#nav li.current a {
     color: #7A7A7A;
 }
 
+#about .mainp {
+    word-break: normal;
+}
+
 #about .profile-pic {
     position: relative;
     width: 210px;
