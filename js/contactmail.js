@@ -22,7 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 $(function() {
-    $("form[name='contactForm']").validate({
+    $('form[name=\'contactForm\']').validate({
         rules: {
             name: {
                 required: true,
@@ -38,13 +38,13 @@ $(function() {
             }
         },
         messages: {
-            firstname: "Por favor ingrese su nombre",
-            lastname: "Por favor ingrese su apellido",
+            firstname: 'Por favor ingrese su nombre',
+            lastname: 'Por favor ingrese su apellido',
             password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 5 characters long"
+                required: 'Por favor ingrese una contraseña',
+                minlength: 'La contraseña debe tener al menos 5 caracteres'
             },
-            email: "Por favor inrese un email válido"
+            email: 'Por favor ingrese un email válido'
         },
         submitHandler: function(form) {
             form.submit();
