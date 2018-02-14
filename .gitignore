@@ -1,2 +1,5 @@
 # OS-X cache file
 .DS_Store
+
+# PHP
+projects/
