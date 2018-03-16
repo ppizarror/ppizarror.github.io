@@ -22,7 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 // Funciones al cargar la página web
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
     // Escribe los banners sociales
     writeSocialBar();
@@ -36,11 +36,12 @@ jQuery(document).ready(function($) {
         // Activa las skills
         var $animation_elements = $('.on-view-triggger');
         var $window = $(window);
+
         function activate_skills_bars() {
             var window_height = $window.height();
             var window_top_position = $window.scrollTop();
             var window_bottom_position = (window_top_position + window_height);
-            $.each($animation_elements, function() {
+            $.each($animation_elements, function () {
                 var $element = $(this);
                 var element_height = $element.outerHeight();
                 var element_top_position = $element.offset().top;
@@ -54,6 +55,7 @@ jQuery(document).ready(function($) {
                 }
             });
         }
+
         $window.on('scroll resize', activate_skills_bars);
         $window.trigger('scroll');
     }
@@ -70,10 +72,10 @@ jQuery(document).ready(function($) {
     // Subraya la sección en el menú
     var sections = $('.menuelem');
     var navigation_links = $('#nav-wrap a');
-    sections.each(function() {
+    sections.each(function () {
         new Waypoint({
             element: this,
-            handler: function(direction) {
+            handler: function (direction) {
                 var previousWaypoint = this.previous();
                 var nextWaypoint = this.next();
                 var activeWaypoint = this;
@@ -94,7 +96,7 @@ jQuery(document).ready(function($) {
         'height': $(window).height()
     });
     if (!is_movile_browser) {
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
             $('header').css('height', $(window).height());
             $('body').css('width', $(window).width());
         });
@@ -105,7 +107,7 @@ jQuery(document).ready(function($) {
     }
 
     // Flittext config
-    setTimeout(function() {
+    setTimeout(function () {
         $('h1.responsive-headline').fitText(1, {
             minFontSize: '40px',
             maxFontSize: '90px'
@@ -113,13 +115,13 @@ jQuery(document).ready(function($) {
     }, 100);
 
     // Smooth scroll
-    $('.smoothscroll').on('click', function(e) {
+    $('.smoothscroll').on('click', function (e) {
         e.preventDefault();
         var target = this.hash,
             $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 800, 'swing', function() {
+        }, 800, 'swing', function () {
             window.location.hash = target;
         });
     });
@@ -129,7 +131,7 @@ jQuery(document).ready(function($) {
     $('#background-page-header-colored').fadeIn(200);
     console.log(String.format('Estableciendo el fondo de pantalla {0} - ID {1}', wallpaper_db.image, wallpaper_db.index));
     var back_img = new Image();
-    back_img.onload = function() {
+    back_img.onload = function () {
         if (parallaxenabled && !is_movile_browser) {
             $('#background-page-header').parallax({
                 imageSrc: image_url,
@@ -147,20 +149,20 @@ jQuery(document).ready(function($) {
             $('#background-page-header').css('width', $(window).width());
             wallpaper_db_random_blur('#background-page-header', blurprobability, blurlimits);
         }
-        setTimeout(function() {
+        setTimeout(function () {
             $('#background-page-header-colored').fadeOut('slow');
         }, timeoutFadeInWallpaperAferLoad);
     }
     back_img.src = wallpaper_db.image;
 
     // Se añade evento resize del fondo
-    $(window).resize(function() {
+    $(window).resize(function () {
         $('#background-page-header').css('width', $(window).width());
     });
 
     // Navegación por fadein/out
     navWrapTrigger();
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         navWrapTrigger();
     });
 
@@ -172,7 +174,7 @@ jQuery(document).ready(function($) {
         showCloseBtn: false,
         mainClass: 'mfp-fade'
     });
-    $(document).on('click', '.popup-modal-dismiss', function(e) {
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
         e.preventDefault();
         $.magnificPopup.close();
     });
