@@ -8,7 +8,7 @@
 
 @-moz-keyframes msoffice {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 75%;
@@ -17,7 +17,7 @@
 
 @-webkit-keyframes msoffice {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 75%;
@@ -32,7 +32,7 @@
 
 @-moz-keyframes matlab {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 80%;
@@ -41,7 +41,7 @@
 
 @-webkit-keyframes matlab {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 80%;
@@ -56,7 +56,7 @@
 
 @-moz-keyframes autocad {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 30%;
@@ -65,7 +65,7 @@
 
 @-webkit-keyframes autocad {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 30%;
@@ -80,7 +80,7 @@
 
 @-moz-keyframes pythonlang {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -89,7 +89,7 @@
 
 @-webkit-keyframes pythonlang {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -104,7 +104,7 @@
 
 @-moz-keyframes javalang {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 65%;
@@ -113,7 +113,7 @@
 
 @-webkit-keyframes javalang {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 65%;
@@ -128,7 +128,7 @@
 
 @-moz-keyframes jshtmlcssphp {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 90%;
@@ -137,7 +137,7 @@
 
 @-webkit-keyframes jshtmlcssphp {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 90%;
@@ -152,7 +152,7 @@
 
 @-moz-keyframes latextypo {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 77%;
@@ -161,7 +161,7 @@
 
 @-webkit-keyframes latextypo {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 77%;
@@ -176,7 +176,7 @@
 
 @-moz-keyframes cfortrancsharp {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 40%;
@@ -185,7 +185,7 @@
 
 @-webkit-keyframes cfortrancsharp {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 40%;

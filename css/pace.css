@@ -1,5 +1,4 @@
 .pace {
-    -webkit-pointer-events: none;
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -23,7 +22,7 @@
 .pace .pace-progress-inner {
     display: block;
     position: absolute;
-    right: 0px;
+    right: 0;
     width: 100px;
     height: 100%;
     box-shadow: 0 0 35px #29d, 0 0 15px #29d;
@@ -49,7 +48,6 @@
     border-radius: 10px;
     -webkit-animation: pace-spinner 400ms linear infinite;
     -moz-animation: pace-spinner 400ms linear infinite;
-    -ms-animation: pace-spinner 400ms linear infinite;
     -o-animation: pace-spinner 400ms linear infinite;
     animation: pace-spinner 400ms linear infinite;
 }
@@ -101,10 +99,8 @@
 @keyframes pace-spinner {
     0% {
         transform: rotate(0deg);
-        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }

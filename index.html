@@ -13,7 +13,7 @@
     <!--
     The MIT License (MIT)
 
-    Copyright 2017 Pablo Pizarro R.
+    Copyright 2017-2018 Pablo Pizarro R.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -66,12 +66,8 @@
     <link rel="stylesheet" href="css/magnific-popup.min.css">
     <link rel="stylesheet" href="css/pace.min.css">
 
-    <!-- Importación js inicial -->
-    <script src="js/config.min.js"></script>
-    <!--suppress JSUnresolvedLibraryURL -->
-    <script src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/pace.min.js"></script>
+    <!-- Librerías -->
+    <script src="js/jquery.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fittext.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -80,8 +76,13 @@
     <script src="js/modernizr.min.js"></script>
     <script src="js/localization/messages_es.min.js"></script>
     <script src="js/contactmail.min.js"></script>
-    <script src="js/utils.min.js"></script>
-    <script src="js/onstartup.min.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- Aplicación -->
+    <script src="app/config.min.js"></script>
+    <script src="http://ppizarror.com/wallpaper-db/db.min.js"></script>
+    <script src="app/utils.min.js"></script>
+    <script src="app/onstartup.min.js"></script>
 </head>
 
 <body>
@@ -435,13 +436,12 @@
         </aside>
     </div>
 </section>
-
 <footer>
     <div class="row">
         <div class="twelve columns">
             <ul class="social-links"></ul>
             <ul class="copyright">
-                <li>&copy; Copyright 2017 ppizarror</li>
+                <li>&copy; Copyright 2017-2018 ppizarror</li>
             </ul>
         </div>
         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
@@ -449,4 +449,15 @@
 </footer>
 </body>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118050511-5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-118050511-5');
+</script>
 </html>

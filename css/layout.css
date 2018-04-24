@@ -24,8 +24,8 @@
 body {
     background: #0f0f0f;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     min-width: 320px;
 }
 
@@ -73,9 +73,9 @@ header .banner-text {
 
 header .banner-color-bg {
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     background-color: rgba(53, 53, 53, 0.90);
 }
 
@@ -84,7 +84,7 @@ header .banner-text h1 {
     color: #fff;
     letter-spacing: -2px;
     margin: 0 auto 18px auto;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
 }
 
 header .banner-text h3 {
@@ -92,7 +92,7 @@ header .banner-text h3 {
     color: #FFFFFF;
     margin: 0 auto;
     width: 85%;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 }
 
 header .banner-text a {
@@ -116,7 +116,7 @@ header .social {
     margin: 24px 0;
     padding: 0;
     font-size: 30px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
 }
 
 header .social li {
@@ -146,7 +146,6 @@ header .scrolldown a {
     width: 42px;
     font-size: 42px;
     line-height: 42px;
-    color: #fff;
     border-radius: 100%;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -174,7 +173,7 @@ header .scrolldown a:hover {
     font: 12px 'opensans-bold', sans-serif;
     width: 100%;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     margin: 0 auto;
     z-index: 1000;
     position: fixed;
@@ -188,7 +187,7 @@ header .scrolldown a:hover {
 
 /* hide toggle button */
 
-#nav-wrap>a.mobile-btn {
+#nav-wrap > a.mobile-btn {
     display: none;
 }
 
@@ -220,7 +219,6 @@ ul#nav li a {
     -webkit-transition: color .2s ease-in-out;
     -moz-transition: color .2s ease-in-out;
     -o-transition: color .2s ease-in-out;
-    -ms-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
 }
 
@@ -270,9 +268,9 @@ ul#nav li.current a {
     width: 210px;
     height: 210px;
     border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
 }
 
 #about .contact-details {
@@ -444,7 +442,6 @@ ul#nav li.current a {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -468,7 +465,7 @@ ul#nav li.current a {
     -moz-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    background: url(../images/overlay-bg.png) repeat;
+    /*background: url(../images/overlay-bg.png) repeat;*/
 }
 
 .portfolio-item .item-wrap .link-icon {
@@ -596,7 +593,6 @@ ul#nav li.current a {
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
 }
 
@@ -633,7 +629,7 @@ ul#nav li.current a {
 }
 
 #call-to-action .header-col h1:before {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     content: "\f0ac";
     padding-right: 10px;
     font-size: 72px;
@@ -679,89 +675,6 @@ call-to-action .button {
     color: #D8D8D8;
 }
 
-/* g. Testimonials
-/* ------------------------------------------------------------------ */
-
-#testimonials {
-    background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    background-attachment: fixed;
-    position: relative;
-    min-height: 200px;
-    width: 100%;
-    overflow: hidden;
-}
-
-#testimonials .text-container {
-    padding-top: 96px;
-    padding-bottom: 66px;
-}
-
-#testimonials h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-}
-
-#testimonials h1 span {
-    display: none;
-}
-
-#testimonials .header-col {
-    padding-top: 9px;
-}
-
-#testimonials .header-col h1:before {
-    font-family: 'FontAwesome';
-    content: "\f10d";
-    padding-right: 10px;
-    font-size: 72px;
-    line-height: 72px;
-    text-align: left;
-    float: left;
-    color: #fff;
-}
-
-/*	Blockquotes */
-
-#testimonials blockquote {
-    margin: 0 0px 30px 0px;
-    padding-left: 0;
-    position: relative;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-}
-
-#testimonials blockquote:before {
-    content: none;
-}
-
-#testimonials blockquote p {
-    font-family: 'librebaskerville-italic', serif;
-    padding: 0;
-    font-size: 24px;
-    line-height: 48px;
-    color: #fff
-}
-
-#testimonials blockquote cite {
-    display: block;
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    color: #fff;
-}
-
-#testimonials blockquote cite:before {
-    content: "\2014 \0020";
-}
-
-#testimonials blockquote cite a, #testimonials blockquote cite a:visited {
-    color: #8B9798;
-    border: none
-}
-
 /* Flex Slider
 /* ------------------------------------------------------------------ */
 
@@ -790,13 +703,13 @@ call-to-action .button {
     padding: 0;
 }
 
-.flexslider .slides>li {
+.flexslider .slides > li {
     position: relative;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 
-.flexslider .slides>li {
+.flexslider .slides > li {
     display: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -824,13 +737,13 @@ call-to-action .button {
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
 
-.no-js .slides>li:first-child {
+.no-js .slides > li:first-child {
     display: block;
 }
 
 /* Slider Styles */
 
-.slides>li {
+.slides > li {
     /*margin-right: 5px; */
     overflow: hidden;
 }
@@ -847,7 +760,6 @@ call-to-action .button {
 .flex-control-nav li {
     margin: 0 6px;
     display: inline-block;
-    display: inline;
 }
 
 .flex-control-paging li a {
@@ -903,7 +815,6 @@ call-to-action .button {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #EBEEEE;
-    margin-bottom: 6px;
 }
 
 #contact h1 span {
@@ -911,7 +822,7 @@ call-to-action .button {
 }
 
 #contact h1:before {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     content: "\f0e0";
     padding-right: 10px;
     font-size: 72px;
@@ -933,7 +844,7 @@ call-to-action .button {
 }
 
 #contact .header-col {
-    padding-top: 6px;
+    padding-top: 0;
 }
 
 /* contact form */
@@ -945,10 +856,8 @@ call-to-action .button {
 #contact form input.error {
     color: #F06000;
     width: 65%;
-    padding-bottom: 0px;
     /* padding-left: 0; */
-    margin: auto;
-    margin-left: 0px;
+    margin: auto auto auto 0;
     /* line-height: 50px; */
     padding-top: 7px;
     /* height: 60px; */
@@ -958,10 +867,8 @@ call-to-action .button {
 #contact form textarea.error {
     color: #F06000;
     width: 65%;
-    padding-bottom: 0px;
     /* padding-left: 0; */
-    margin: auto;
-    margin-left: 0px;
+    margin: auto auto auto 0;
     /* line-height: 50px; */
     padding-top: 7px;
     /* height: 60px; */
@@ -974,8 +881,7 @@ call-to-action .button {
     padding-bottom: 0;
     /* padding-left: 0; */
     /* margin: auto; */
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: 0;
     background-color: #333;
     font-weight: normal;
     font-size: small;
@@ -1067,7 +973,7 @@ call-to-action .button {
 }
 
 #twitter li {
-    margin: 6px 0px 12px 0;
+    margin: 6px 0 12px 0;
     line-height: 30px;
 }
 
@@ -1152,9 +1058,8 @@ footer a:hover {
 
 footer .social-links li {
     display: inline-block;
-    margin: 0;
     padding: 0;
-    margin-left: 42px;
+    margin: 0 0 0 42px;
     color: #F06000;
 }
 
@@ -1181,7 +1086,6 @@ footer .social-links li:first-child {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     color: #fff;
     font-size: 21px;
