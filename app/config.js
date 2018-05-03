@@ -21,7 +21,7 @@
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var blurlimits = [3, 10]; // Límites de blur
+var blurlimits = [3, 3]; // Límites de blur
 var blurprobability = 50; // Probabilidad de blur
 var parallaxenabled = true; // Activa el parallax
 var showresume = false; // Muestra o no el resumen

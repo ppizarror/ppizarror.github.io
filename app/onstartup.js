@@ -163,7 +163,7 @@ $(function () {
             imageSrc: wallpaper_db.image,
             positionX: 'center',
             positionY: 'bottom',
-            speed: 0.15
+            speed: 0.12
         });
     } else {
         let back_img = new Image();
@@ -176,12 +176,25 @@ $(function () {
             $bgheader.css('-moz-background-size', 'cover');
             $bgheader.css('-o-background-size', 'cover');
             $bgheader.css('background-size', 'cover');
-            $bgheader.css('width', $(window).width());
-            /* global wallpaper_db_random_blur */
-            wallpaper_db_random_blur('#background-page-header', blurprobability, blurlimits);
         };
         // noinspection JSValidateTypes
         back_img.src = wallpaper_db.image;
+    }
+
+    /**
+     * Se aplica el blur
+     */
+    try {
+        let $_bgheader;
+        if (parallaxenabled && !is_movile_browser) {
+            $_bgheader = '.parallax-mirror';
+        } else {
+            $_bgheader = '#background-page-header';
+        }
+        // noinspection JSUnresolvedFunction
+        wallpaper_db_random_blur($_bgheader, blurprobability, blurlimits);
+    } catch ($e) {
+    } finally {
     }
 
     setTimeout(function () {
@@ -191,9 +204,18 @@ $(function () {
     /**
      * Se añade evento resize del fondo
      */
-    $(window).resize(function () {
-        $('#background-page-header').css('width', $(window).width());
-    });
+    let $resizeHeader = function () {
+        let $bgheader;
+        if (parallaxenabled && !is_movile_browser) {
+            $bgheader = $('.parallax-mirror');
+        } else {
+            $bgheader = $('#background-page-header');
+        }
+        $bgheader.css('width', $(window).innerWidth() * 1.1 + 'px');
+        $bgheader.css('height', $(window).innerHeight() * 1.1 + 'px');
+    };
+    $(window).on('resize', $resizeHeader);
+    $resizeHeader();
 
     /**
      * Navegación por fadein/out
