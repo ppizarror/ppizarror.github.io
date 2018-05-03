@@ -157,15 +157,17 @@ $(function () {
     $bgheaderc.css('background-color', wallpaper_db.color);
     $bgheaderc.fadeIn(200);
     console.log(String.format('Estableciendo el fondo de pantalla {0} - ID {1}', wallpaper_db.image, wallpaper_db.index));
-    let back_img = new Image();
-    back_img.onload = function () {
-        if (parallaxenabled && !is_movile_browser) {
-            // noinspection JSUnresolvedVariable
-            $('#background-page-header').parallax({
-                imageSrc: wallpaper_db.image_url,
-                speed: 0.15
-            });
-        } else {
+    if (parallaxenabled && !is_movile_browser) {
+        // noinspection JSUnresolvedVariable
+        $bgheader.parallax({
+            imageSrc: wallpaper_db.image,
+            positionX: 'center',
+            positionY: 'bottom',
+            speed: 0.15
+        });
+    } else {
+        let back_img = new Image();
+        back_img.onload = function () {
             $bgheader.css({
                 'background': wallpaper_db.color + ' url(' + wallpaper_db.image + ') ' + wallpaper_db.position + ' no-repeat fixed',
                 'background-attachment': 'fixed',
@@ -177,13 +179,14 @@ $(function () {
             $bgheader.css('width', $(window).width());
             /* global wallpaper_db_random_blur */
             wallpaper_db_random_blur('#background-page-header', blurprobability, blurlimits);
-        }
-        setTimeout(function () {
-            $('#background-page-header-colored').fadeOut('slow');
-        }, timeoutFadeInWallpaperAferLoad);
-    };
-    // noinspection JSValidateTypes
-    back_img.src = wallpaper_db.image;
+        };
+        // noinspection JSValidateTypes
+        back_img.src = wallpaper_db.image;
+    }
+
+    setTimeout(function () {
+        $('#background-page-header-colored').fadeOut('slow');
+    }, timeoutFadeInWallpaperAferLoad);
 
     /**
      * Se añade evento resize del fondo
@@ -224,4 +227,5 @@ $(function () {
      * Se comprueba si se envió un mensaje
      */
     check_if_msg_sent();
-});
+})
+;
