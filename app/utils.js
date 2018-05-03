@@ -37,18 +37,18 @@ if (!String.format) {
 
 // noinspection JSUnusedGlobalSymbols
 /**
- * Genera un número aleatorio entero entre min y max.
+ * Genera un número aleatorio entero entre min y max
  * @param min
  * @param max
- * @return {*}
+ * @return {number}
  */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
- * Escribe los banner sociales.
- * @return
+ * Escribe los banner sociales
+ * @function
  */
 function writeSocialBar() {
     let socialhtml = $('.social').html();
@@ -57,10 +57,10 @@ function writeSocialBar() {
 
 // noinspection JSUnusedGlobalSymbols
 /**
- * Anima un elemento con css fadeIn.
+ * Anima un elemento con css fadeIn
+ * @function
  * @param idelem
  * @param t
- * @return
  */
 function fadein_css(idelem, t) {
     $(idelem).css('animation-name', 'fadeIn');
@@ -71,8 +71,8 @@ function fadein_css(idelem, t) {
 }
 
 /**
- * Activa o desactiva el nav-wrap.
- * @return
+ * Activa o desactiva el nav-wrap
+ * @function
  */
 function navWrapTrigger() {
     let h = $('header').height();

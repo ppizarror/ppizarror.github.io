@@ -142,7 +142,7 @@ $(function () {
         let target = this.hash,
             $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
+            'scrollTop': $target.offset().top + 5
         }, 800, 'swing', function () {
             window.location.hash = target;
         });
@@ -158,13 +158,17 @@ $(function () {
     $bgheaderc.fadeIn(200);
     console.log(String.format('Estableciendo el fondo de pantalla {0} - ID {1}', wallpaper_db.image, wallpaper_db.index));
     if (parallaxenabled && !is_movile_browser) {
-        // noinspection JSUnresolvedVariable
+        // noinspection JSUnresolvedFunction
         $bgheader.parallax({
-            imageSrc: wallpaper_db.image,
+            src: wallpaper_db.image,
             positionX: 'center',
             positionY: 'bottom',
-            speed: 0.12
+            speed: 0.175,
+            afterRefresh: function () {
+                $('#background-page-header-colored').fadeOut('slow');
+            }
         });
+        $('.parallax-mirror').attr('id', 'parallaxBg');
     } else {
         let back_img = new Image();
         back_img.onload = function () {
@@ -176,6 +180,10 @@ $(function () {
             $bgheader.css('-moz-background-size', 'cover');
             $bgheader.css('-o-background-size', 'cover');
             $bgheader.css('background-size', 'cover');
+
+            setTimeout(function () {
+                $('#background-page-header-colored').fadeOut('slow');
+            }, timeoutFadeInWallpaperAferLoad);
         };
         // noinspection JSValidateTypes
         back_img.src = wallpaper_db.image;
@@ -187,19 +195,15 @@ $(function () {
     try {
         let $_bgheader;
         if (parallaxenabled && !is_movile_browser) {
-            $_bgheader = '.parallax-mirror';
+            $_bgheader = 'parallaxBg';
         } else {
-            $_bgheader = '#background-page-header';
+            $_bgheader = 'background-page-header';
         }
         // noinspection JSUnresolvedFunction
         wallpaper_db_random_blur($_bgheader, blurprobability, blurlimits);
     } catch ($e) {
     } finally {
     }
-
-    setTimeout(function () {
-        $('#background-page-header-colored').fadeOut('slow');
-    }, timeoutFadeInWallpaperAferLoad);
 
     /**
      * Se añade evento resize del fondo
